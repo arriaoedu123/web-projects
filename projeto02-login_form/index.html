@@ -1,0 +1,148 @@
+<!--
+# Autor: Arreaum
+# GitHub: https://github.com/arriaoedu123/
+# Data de criação: 05/11/2020
+# Versão: 1.0
+-->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Form</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+      charset="utf-8"
+    ></script>
+  </head>
+  <body>
+    <!--começo do form-->
+    <div class="form">
+      <!--começo do login-->
+      <form action="" class="login-form" method="post">
+        <i class="fas fa-user-circle"></i>
+        <input
+          class="user-input"
+          name=""
+          type="text"
+          placeholder="Usuário"
+          required
+        />
+        <input
+          class="user-input"
+          type="password"
+          placeholder="Senha"
+          required
+        />
+        <div class="options-01">
+          <label class="lembrar-me">
+            <input class="checkbox" name="" type="checkbox" />Lembrar-me
+          </label>
+          <a href="#">Esqueceu sua senha?</a>
+        </div>
+        <input class="botao" name="" type="submit" value="ENTRAR" />
+        <div class="options-02">
+          <p>Não registrado? <a href="#">Crie uma conta</a></p>
+        </div>
+      </form>
+      <!--fim do login-->
+      <!--começo do registro-->
+      <form class="registro-form" action="" method="post">
+        <i class="fas fa-user-plus"></i>
+        <input
+          class="user-input"
+          name=""
+          type="text"
+          placeholder="Usuário"
+          required
+        />
+        <input
+          class="user-input"
+          name=""
+          type="email"
+          placeholder="E-mail"
+          required
+        />
+        <input
+          class="user-input"
+          name=""
+          type="password"
+          placeholder="Senha"
+          required
+        />
+        <input class="botao" type="submit" name="" value="CRIAR" />
+        <div class="options-03">
+          <p>Já registrado? <a href="#">Entrar</a></p>
+        </div>
+      </form>
+      <!--fim do registro-->
+      <!--começo da recuperação-->
+      <form class="recuperacao-form" action="" method="post">
+        <i class="fas fa-user-clock"></i>
+        <input class="user-input" type="text" name="" placeholder="E-mail" required>
+        <input class="botao" type="submit" name="" value="ENVIAR" />
+        <div class="options-04">
+          <p>Lembrou da senha? <a href="#">Entrar</a></p>
+        </div>
+      </form> 
+      <!--fim da recuperãção--> 
+    </div>
+    <!--fim da form-->
+
+
+    <script type="text/javascript">
+      $(".options-04 a").click(function () {
+        $('.registro-form').hide("slow");
+        $('.recuperacao-form').hide("slow");
+        $(".login-form").animate(
+          {
+            height: "toggle",
+            opacity: "toggle",
+          },
+          "slow"
+        );
+      });
+
+      $(".options-03 a").click(function () {
+        $('.registro-form').hide("slow");
+        $('.recuperacao-form').hide("slow");
+        $(".login-form").animate(
+          {
+            height: "toggle",
+            opacity: "toggle",
+          },
+          "slow"
+        );
+      });
+
+      $(".options-02 a").click(function () {
+        $('.login-form').hide("slow");
+        $('.recuperacao-form').hide("slow");
+        $(".registro-form").animate(
+          {
+            height: "toggle",
+            opacity: "toggle",
+          },
+          "slow"
+        );
+      });
+
+      $(".options-01 a").click(function () {
+        $('.login-form').hide("slow");
+        $(".recuperacao-form").animate(
+          {
+            height: "toggle",
+            opacity: "toggle",
+          },
+          "slow"
+        );
+      });
+    </script>
+  </body>
+</html>
