@@ -1,4 +1,11 @@
-# Projetos em HTML/CSS/JS
+![htmlcssjs-details](https://user-images.githubusercontent.com/73148019/117894450-bc5b4700-b292-11eb-96f6-69b9412a71ab.png)
+
+# *Projetos de HTML/CSS/JS*
   
-  Este repositório é apenas um registro das ideias de projetos que eu descubro na internet.
-  Alguns deles eu fiz do zero, outros eu peguei da internet.
+## Não Responsivos
+
+  * [Calculadora Simples](https://github.com/arriaoedu123/web-projetos/tree/main/projeto01-calculadora_simples)
+
+## Responsivos
+
+  * [Formulário de Login](https://github.com/arriaoedu123/web-projetos/tree/main/projeto02-login_form)
