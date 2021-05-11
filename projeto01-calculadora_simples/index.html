@@ -1,0 +1,53 @@
+<!--
+# Autor: Arreaum
+# GitHub: https://github.com/arriaoedu123/
+# Data de criação: 29/03/2021
+# Data de atualização 30/03/2021
+# Versão: 1.1
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculadora Simples</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&display=swap" rel="stylesheet"> 
+</head>
+<body>
+	<!-- Visor da Calculadora -->
+	<div class="visor_calculadora">
+		<!-- Coiso onde aparece os número do visor tudo -->		
+		<div class="negocio_dos_numeros">
+			<!-- Coiso anterior do cálculo -->			
+			<div numero-anterior class="numero_anterior"></div>
+			<!-- Coiso atual do cálculo -->			
+			<div numero-atual class="numero_atual"></div>
+		</div>
+		<!-- Teclado da Calculadora -->	
+		<button btn-limpar class="span-two">C</button>
+		<button btn-deletar class="cor-operacao"><--</button>
+		<button btn-operacao class="cor-operacao">/</button>
+		<button btn-numero class="cor-numero">1</button>
+		<button btn-numero class="cor-numero">2</button>
+		<button btn-numero class="cor-numero">3</button>
+		<button btn-operacao class="cor-operacao">*</button>
+		<button btn-numero class="cor-numero">4</button>
+		<button btn-numero class="cor-numero">5</button>
+		<button btn-numero class="cor-numero">6</button>
+		<button btn-operacao class="cor-operacao">+</button>
+		<button btn-numero class="cor-numero">7</button>
+		<button btn-numero class="cor-numero">8</button>
+		<button btn-numero class="cor-numero">9</button>
+		<button btn-operacao class="cor-operacao">-</button>
+		<button btn-numero class="cor-operacao">.</button>
+		<button btn-numero class="cor-numero">0</button>
+		<button btn-igual class="span-two-igual">=</button>
+	</div>
+
+	<script src="script.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>
