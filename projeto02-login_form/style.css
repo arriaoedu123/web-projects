@@ -2,7 +2,8 @@
 # Autor: Arreaum
 # GitHub: https://github.com/arriaoedu123/
 # Data de criação: 05/11/2020
-# Versão: 1.0
+# Data de atualização: 11/05/2020
+# Versão: 1.1
 */
 
 * {
@@ -149,10 +150,6 @@ body {
 
 .form .options-04 a {
   color: #4285f4;
-}
-
-.checkbox {
-  border: 1px solid green;
 }
 
 /* Responsive CSS */

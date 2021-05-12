@@ -2,7 +2,8 @@
 # Autor: Arreaum
 # GitHub: https://github.com/arriaoedu123/
 # Data de criação: 05/11/2020
-# Versão: 1.0
+# Data de atualização: 11/05/2020
+# Versão: 1.1
 -->
 
 <!DOCTYPE html>
@@ -42,7 +43,7 @@
         />
         <div class="options-01">
           <label class="lembrar-me">
-            <input class="checkbox" name="" type="checkbox" />Lembrar-me
+            <input name="" type="checkbox" />Lembrar-me
           </label>
           <a href="#">Esqueceu sua senha?</a>
         </div>
@@ -95,54 +96,6 @@
     </div>
     <!--fim da form-->
 
-
-    <script type="text/javascript">
-      $(".options-04 a").click(function () {
-        $('.registro-form').hide("slow");
-        $('.recuperacao-form').hide("slow");
-        $(".login-form").animate(
-          {
-            height: "toggle",
-            opacity: "toggle",
-          },
-          "slow"
-        );
-      });
-
-      $(".options-03 a").click(function () {
-        $('.registro-form').hide("slow");
-        $('.recuperacao-form').hide("slow");
-        $(".login-form").animate(
-          {
-            height: "toggle",
-            opacity: "toggle",
-          },
-          "slow"
-        );
-      });
-
-      $(".options-02 a").click(function () {
-        $('.login-form').hide("slow");
-        $('.recuperacao-form').hide("slow");
-        $(".registro-form").animate(
-          {
-            height: "toggle",
-            opacity: "toggle",
-          },
-          "slow"
-        );
-      });
-
-      $(".options-01 a").click(function () {
-        $('.login-form').hide("slow");
-        $(".recuperacao-form").animate(
-          {
-            height: "toggle",
-            opacity: "toggle",
-          },
-          "slow"
-        );
-      });
-    </script>
+    <script src="script.js" type="text/javascript" charset="utf-8"></script>
   </body>
 </html>
