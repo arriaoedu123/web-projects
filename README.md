@@ -2,6 +2,10 @@
 
 # *Projetos de HTML/CSS/JS*
   
+***
+ 
+<br>
+  
 ## Não Responsivos
 
   * [Calculadora Simples](https://github.com/arriaoedu123/web-projetos/tree/main/projeto01-calculadora_simples)
@@ -9,3 +13,11 @@
 ## Responsivos
 
   * [Formulário de Login](https://github.com/arriaoedu123/web-projetos/tree/main/projeto02-login_form)
+
+<br>
+
+***
+
+**HTML** | **CSS** | **JS**
+--- | --- | ---
+*41.7%* | *31.8%* | *26.5%*
