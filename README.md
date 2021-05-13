@@ -25,6 +25,7 @@ This repository is a registry of the ideas I find on the internet. Feel free to 
 ## Non-Responsive
 
   1. [Simple Calculator](https://github.com/arriaoedu123/web-projetos/tree/main/projeto01-calculadora_simples)
+  2. [To-Do List](https://github.com/arriaoedu123/web-projects/tree/main/project04-todo_list)
 
 ## Responsive
 
