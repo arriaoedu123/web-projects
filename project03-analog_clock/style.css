@@ -1,0 +1,203 @@
+/*
+# Creator: Arreaum
+# GitHub: https://github.com/arriaoedu123/
+# Creation date: 12/05/2021
+# Version: 1.0
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Girassol&display=swap');
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Girassol', sans-serif;
+}
+
+body {
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #808080;
+}
+
+.clock {
+	position: relative;
+	width: 500px;
+	height: 500px;
+	overflow: hidden;
+	border-radius: 250px;
+	border: 6px solid #111;
+	background-color: #DCDCDC;
+}
+
+.clock:after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;	
+}
+
+.clock:before {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 20px;
+	height: 20px;
+	background-color: black;
+	border-radius: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.nb {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	text-align: center;
+	font-color: white;
+	font-size: 2rem;
+	font-weight: 700;
+	padding: 18px;
+}
+
+.nb:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+	width: 5px;
+	height: 15px;
+	background-color: black;
+}
+
+.nb1 {
+	transform: rotate(30deg);
+}
+
+.nb1 div {
+	transform: rotate(-30deg);
+}
+
+.nb2 {
+	transform: rotate(60deg);
+}
+
+.nb2 div {
+	transform: rotate(-60deg);
+}
+
+.nb3 {
+	transform: rotate(90deg);
+}
+
+.nb3 div {
+	transform: rotate(-90deg);
+}
+
+.nb4 {
+	transform: rotate(120deg);
+}
+
+.nb4 div {
+	transform: rotate(-120deg);
+}
+
+.nb5 {
+	transform: rotate(150deg);
+}
+
+.nb5 div {
+	transform: rotate(-150deg);
+}
+
+.nb6 {
+	transform: rotate(180deg);
+}
+
+.nb6 div {
+	transform: rotate(-180deg);
+}
+
+.nb7 {
+	transform: rotate(210deg);
+}
+
+.nb7 div {
+	transform: rotate(-210deg);
+}
+
+.nb8 {
+	transform: rotate(240deg);
+}
+
+.nb8 div {
+	transform: rotate(-240deg);
+}
+
+.nb9 {
+	transform: rotate(270deg);
+}
+
+.nb9 div {
+	transform: rotate(-270deg);
+}
+
+.nb10 {
+	transform: rotate(300deg);
+}
+
+.nb10 div {
+	transform: rotate(-300deg);
+}
+
+.nb11 {
+	transform: rotate(330deg);
+}
+
+.nb11 div {
+	transform: rotate(-330deg);
+}
+
+.stick {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.stick div {
+	position: absolute;
+	bottom: 50%;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: black;
+}
+
+.sec {
+	width: 3px;
+	height: 40%;
+}
+
+.min {
+	height: 38%;
+	width: 5px;
+	border-radius: 2px;
+}
+
+.hour {
+	height: 38%;
+	width: 8px;
+	border-radius: 4px;
+}
