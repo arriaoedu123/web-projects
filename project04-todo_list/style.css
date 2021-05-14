@@ -38,14 +38,14 @@ body{
 }
 .addTask button{
 	margin: 0 10px;
-	background: #222;
-	color: #fff;
+	background: white;
+	color: black;
 	font-size: 18px;
 	text-transform: uppercase;
 	padding: 10px;
 	border: none;
 	outline: none;
-	border-radius: 5px;
+	border-radius: 10px;
 	cursor: pointer;
 }
 .notCompleted, .Completed{
