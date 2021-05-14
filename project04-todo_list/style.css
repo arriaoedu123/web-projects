@@ -66,12 +66,13 @@ ol li{
 	width: 100%;
 	padding: 18px;
 	margin: 5px 0;
-	background: #e96969bb;
+	background: #DF3939;
+	border-radius: 10px;
 	font-size: 22px;
 	counter-increment: my-counter;
 }
 ol.Completed li{
-	background: #00ff62;
+	background: #66CC00;
 }
 ol li::before{
 	content: counter(my-counter);
