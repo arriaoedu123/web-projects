@@ -1,0 +1,127 @@
+/*
+# Creator: Arreaum
+# GitHub: https://github.com/arriaoedu123/
+# Creation date: 02/12/2020
+# Version: 1.0
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+
+body {
+    font-family: 'Noto Sans JP',sans-serif;
+     background: linear-gradient(90deg, rgba(0,146,204,1) 0%, rgba(255,255,255,1) 27%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 73%, rgba(0,146,204,1) 100%);
+}
+.container {
+    width: 100%;
+}
+.packages {
+    margin: 20px;
+    width: 300px;
+    padding-bottom: 1.5em;
+    height: 100%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 2px 6px 15px #1e2321;
+    flex-wrap: wrap;
+    color: black;
+}
+.first {
+    color: #0092cc;
+}
+h1, h2 {
+    font-size: 2.2em;
+}
+.list li {
+    font-size: 20px;
+    list-style: none;
+    border-bottom: 1px solid #f4f4f4;
+    padding-inline-start: 0;
+    border-width: 1px;
+}
+ol, ul {
+    padding: 0;
+}
+.top {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+input, label {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 10px 0;
+}
+.button {
+    padding: 10px 30px;
+    font-size: 1.4em;
+    margin: 15px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #0092cc;
+    background-color: #fff;
+    box-shadow: 0 0 1px 0 #0092cc inset,0 0 5px 1px #0092cc;
+    
+}
+.button:hover {
+    background-color: #0092cc;
+    color: #fff;
+    transform: scale(1.1);
+}
+.package-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #0092cc;
+    transform: translate(0px, 0px);
+    transition: 0.6s ease transform, 0.6s box-shadow;
+}
+.slider:before {
+    position: absolute;
+    content: '';
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: #fff;
+    transition: 0.4s;
+}
+input:checked + .slider {
+    background-color: #0092cc;
+}
+input:focus + .slider {
+    box-shadow: 0 0 1px #50bfe6;
+}
+input:checked + .slider:before {
+ transform: translateX(26px);
+}
+.slider.round {
+    border-radius: 34px;
+}
+.slider.round:before {
+    border-radius: 50%;
+}
