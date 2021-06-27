@@ -33,6 +33,7 @@ This repository is a registry of the ideas I find on the internet. Feel free to 
   2. [Analog Clock](https://github.com/arriaoedu123/web-projects/tree/main/project03-analog_clock)
   3. [Password Generator](https://github.com/arriaoedu123/web-projects/tree/main/project05-password_generator)
   4. [Pricing Cards](https://github.com/arriaoedu123/web-projects/tree/main/project06-pricing_cards)
+  5. [Countdown Timer](https://github.com/arriaoedu123/web-projects/tree/main/project07-countdown_timer)
 
 <br>
 
