@@ -1,0 +1,58 @@
+/*
+# Creator: Arreaum
+# GitHub: https://github.com/arriaoedu123/
+# Creation date: 27/06/2021
+# Version: 1.0
+*/
+
+@font-face {
+	font-family: digital;
+	src:url(digital.ttf);
+}
+
+body {
+	font-family: 'digital', sans-serif;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	margin: 0;
+	overflow: hidden;
+	background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(15,15,15,1) 50%, rgba(0,0,0,1) 100%);
+	color: red;	
+    text-shadow: 0px 0px 3px rgba(255, 0, 0, 1);
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+	font-weight: normal;
+	font-size: 18pt;
+	letter-spacing: 5px;
+}
+
+.container {
+	width: 100%;
+}
+
+.countdown {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.timer {
+	margin: 20px;
+	width: 115px;
+    padding-bottom: 1.5em;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    font-size: 24pt;
+}
