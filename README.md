@@ -40,6 +40,7 @@ This repository is a registry of the ideas I find on the internet. Feel free to 
   3. [Password Generator](https://github.com/arriaoedu123/web-projects/tree/main/project05-password_generator)
   4. [Pricing Cards](https://github.com/arriaoedu123/web-projects/tree/main/project06-pricing_cards)
   5. [Countdown Timer](https://github.com/arriaoedu123/web-projects/tree/main/project07-countdown_timer)
+  6. [Navbar](https://github.com/arriaoedu123/web-projects/tree/main/project08-navbar)
 
 <br>
 
