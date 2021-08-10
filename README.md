@@ -27,20 +27,20 @@
 This repository is a registry of the ideas I find on the internet. Feel free to use them in your project.
 
 <br>
-  
-## Non-Responsive
 
+## Projects
+
+<br>
+  
   1. [Simple Calculator](https://github.com/arriaoedu123/web-projetos/tree/main/projeto01-calculadora_simples)
   2. [To-Do List](https://github.com/arriaoedu123/web-projects/tree/main/project04-todo_list)
-
-## Responsive
-
-  1. [Login Form](https://github.com/arriaoedu123/web-projects/tree/main/project02-login_form)
-  2. [Analog Clock](https://github.com/arriaoedu123/web-projects/tree/main/project03-analog_clock)
-  3. [Password Generator](https://github.com/arriaoedu123/web-projects/tree/main/project05-password_generator)
-  4. [Pricing Cards](https://github.com/arriaoedu123/web-projects/tree/main/project06-pricing_cards)
-  5. [Countdown Timer](https://github.com/arriaoedu123/web-projects/tree/main/project07-countdown_timer)
-  6. [Navbar](https://github.com/arriaoedu123/web-projects/tree/main/project08-navbar)
+  3. [Login Form](https://github.com/arriaoedu123/web-projects/tree/main/project02-login_form)
+  4. [Analog Clock](https://github.com/arriaoedu123/web-projects/tree/main/project03-analog_clock)
+  5. [Password Generator](https://github.com/arriaoedu123/web-projects/tree/main/project05-password_generator)
+  6. [Pricing Cards](https://github.com/arriaoedu123/web-projects/tree/main/project06-pricing_cards)
+  7. [Countdown Timer](https://github.com/arriaoedu123/web-projects/tree/main/project07-countdown_timer)
+  8. [Navbar](https://github.com/arriaoedu123/web-projects/tree/main/project08-navbar)
+  9. [Neumorphism Design](https://github.com/arriaoedu123/web-projects/tree/main/project09-neumorphism_design)
 
 <br>
 
