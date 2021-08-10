@@ -1,0 +1,202 @@
+/*
+# Creator: Arreaum
+# GitHub: https://github.com/arriaoedu123/
+# Creation date: 10/08/2021
+# Version: 1.0
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+	transition: 0.5s;
+}
+
+html,body {
+	height: 100%;
+}
+
+body {
+	display: grid;
+	place-items: center;
+	background: #dde1e7;
+	text-align: center;
+}
+
+body.dark {
+	background: #091921;
+}
+
+.container {
+	width: 330px;
+	padding: 40px 30px;
+	background: #dde1e7;
+	border-radius: 10px;
+	box-shadow: -3px -3px 7px #ffffff73,
+	2px 2px 5px rgba(94, 104, 121, 0.288);
+	margin-top: 110px;
+}
+
+body.dark .container {
+	background: #091921;
+	box-shadow: -3px -3px 7px rgba(255, 255, 255, 0.05),
+	2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.text-field {
+	height: 50px;
+	width: 100%;
+	display: flex;
+	position: relative;
+	margin-bottom: 25px;
+}
+
+.text-field input {
+	height: 100%;
+	width: 100%;
+	padding-left: 45px;
+	outline: none;
+	border: none;
+	font-size: 18px;
+	background: #dde1e7;
+	color: #595959;
+	border-radius: 25px;
+	box-shadow: inset 2px 2px 5px #BABECC,
+	inset -5px -5px 10px #ffffff73;
+}
+
+body.dark .text-field input {
+	background: #091921;
+	box-shadow: inset 2px 2px 5px rgba(255, 255, 255, 0.05),
+	inset -5px -5px 10px rgba(255, 255, 255, 0.05);
+
+}
+
+.text-field input:focus {
+	box-shadow: inset 1px 1px 2px #BABECC,
+	inset -1px -1px 2px #ffffff73;
+}
+
+body.dark .text-field input:focus {
+	box-shadow: inset 1px 1px 2px rgba(255, 255, 255, 0.05),
+	inset -1px -1px 2px rgba(255, 255, 255, 0.05);
+}
+
+.text-field label {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 45px;
+	pointer-events: none;
+	color: #666666;
+}
+
+.text-field input:valid ~ label {
+	opacity: 0;
+}
+
+.button {
+	margin: 15px 0;
+	width: 100%;
+	height: 50px;
+	font-size: 18px;
+	line-height: 50px;
+	font-weight: 600;
+	background: #dde1e7;
+	border-radius: 25px;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	color: #595959;
+	box-shadow: 2px 2px 5px #BABECC,
+	-5px -5px 10px #ffffff73;
+	transition: 0s color, 0.5s background, 0.5s box-shadow;
+}
+
+body.dark .button {
+	background: #091921;
+	box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.05),
+	-5px -5px 10px rgba(255, 255, 255, 0.05);	
+}
+
+.button:active {
+	color: #3498db;
+	box-shadow: inset 2px 2px 5px #BABECC,
+	inset -5px -5px 10px #ffffff73;
+}
+
+body.dark .button:active {
+	box-shadow: inset 2px 2px 5px rgba(255, 255, 255, 0.05),
+	inset -5px -5px 10px rgba(255, 255, 255, 0.05);	
+}
+
+.toggleMode {
+	position: absolute;
+	top: 30px;
+	right: 80px;
+}
+
+.checkBox {
+	position: relative;
+	width: 50px;
+	height: 20px;
+	-webkit-appearance:  none;
+	outline: none;
+	border-radius: 20px;
+	background: #dde1e7;
+	box-shadow: -8px -4px 8px 0px #ffffff73,
+	8px 4px 12px 0px rgba(94,104,121,0.288),
+	inset -4px -4px 4px 0px #ffffff73,
+	inset 4px 4px 4px 0px rgba(94,104,121,0.288);
+	cursor: pointer;
+}
+
+.checkBox:checked {
+	background: #091921;
+	box-shadow: -4px -4px 4px 0px rgba(255,255,255,0.05),
+	8px 4px 8px 0px rgba(0,0,0,0.5),
+	inset -4px -4px 4px 0px rgba(255,255,255,0.05),
+	inset 4px 4px 4px 0px rgba(0,0,0,0.5);
+}
+
+.checkBox:before {
+	content: '';
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	border-radius: 20px;
+	top: 0;
+	left: 0;
+	background: #dde1e7;
+	transform: scale(1.1);
+	box-shadow: -4px -4px 8px 0px #ffffff73,
+	8px 4px 12px 0px rgba(94,104,121,0.288);
+	transition: 0.5s;
+}
+
+.checkBox:checked:before {
+	left: 30px;
+	background: #091921;
+	box-shadow: -4px -4px 4px 0px rgba(255,255,255,0.05),
+	8px 4px 8px 0px rgba(0,0,0,0.5);;
+}
+
+.checkText:before {
+	position: absolute;
+	top: 60px;
+	right: 80px;
+	color: #595959;
+	content: 'Dark Mode Off';
+	letter-spacing: 1px;
+	font-size: 14px;
+}
+
+.checkText.checkMode:before{
+	content: 'Dark Mode On';
+}
+
+
+
