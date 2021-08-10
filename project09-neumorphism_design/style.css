@@ -172,7 +172,7 @@ body.dark .button:active {
 	left: 0;
 	background: #dde1e7;
 	transform: scale(1.1);
-	box-shadow: -4px -4px 8px 0px #ffffff73,
+	box-shadow: -4px -4px 4px 0px #ffffff73,
 	8px 4px 12px 0px rgba(94,104,121,0.288);
 	transition: 0.5s;
 }
