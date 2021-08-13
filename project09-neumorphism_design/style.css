@@ -2,7 +2,8 @@
 # Creator: Arreaum
 # GitHub: https://github.com/arriaoedu123/
 # Creation date: 10/08/2021
-# Version: 1.0
+# Update date: 13/08/2021
+# Version: 1.1
 */
 
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
@@ -19,6 +20,8 @@ html,body {
 	height: 100%;
 }
 
+/* Light Mode CSS */
+
 body {
 	display: grid;
 	place-items: center;
@@ -26,24 +29,14 @@ body {
 	text-align: center;
 }
 
-body.dark {
-	background: #091921;
-}
-
 .container {
 	width: 330px;
-	padding: 40px 30px;
+	padding: 40px 30px 28px;
 	background: #dde1e7;
 	border-radius: 10px;
 	box-shadow: -3px -3px 7px #ffffff73,
 	2px 2px 5px rgba(94, 104, 121, 0.288);
 	margin-top: 110px;
-}
-
-body.dark .container {
-	background: #091921;
-	box-shadow: -3px -3px 7px rgba(255, 255, 255, 0.05),
-	2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .text-field {
@@ -68,30 +61,19 @@ body.dark .container {
 	inset -5px -5px 10px #ffffff73;
 }
 
-body.dark .text-field input {
-	background: #091921;
-	box-shadow: inset 2px 2px 5px rgba(255, 255, 255, 0.05),
-	inset -5px -5px 10px rgba(255, 255, 255, 0.05);
-
-}
-
 .text-field input:focus {
 	box-shadow: inset 1px 1px 2px #BABECC,
 	inset -1px -1px 2px #ffffff73;
-}
-
-body.dark .text-field input:focus {
-	box-shadow: inset 1px 1px 2px rgba(255, 255, 255, 0.05),
-	inset -1px -1px 2px rgba(255, 255, 255, 0.05);
 }
 
 .text-field label {
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
-	left: 45px;
+	left: 25px;
 	pointer-events: none;
 	color: #666666;
+	transition: 0s;
 }
 
 .text-field input:valid ~ label {
@@ -116,21 +98,10 @@ body.dark .text-field input:focus {
 	transition: 0s color, 0.5s background, 0.5s box-shadow;
 }
 
-body.dark .button {
-	background: #091921;
-	box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.05),
-	-5px -5px 10px rgba(255, 255, 255, 0.05);	
-}
-
 .button:active {
 	color: #3498db;
 	box-shadow: inset 2px 2px 5px #BABECC,
 	inset -5px -5px 10px #ffffff73;
-}
-
-body.dark .button:active {
-	box-shadow: inset 2px 2px 5px rgba(255, 255, 255, 0.05),
-	inset -5px -5px 10px rgba(255, 255, 255, 0.05);	
 }
 
 .toggleMode {
@@ -198,5 +169,37 @@ body.dark .button:active {
 	content: 'Dark Mode On';
 }
 
+/* Dark Mode CSS */
 
+body.dark {
+	background: #091921;
+}
 
+body.dark .container {
+	background: #091921;
+	box-shadow: -3px -3px 7px rgba(255, 255, 255, 0.05),
+	2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+body.dark .text-field input {
+	background: #091921;
+	box-shadow: inset 2px 2px 5px rgba(255, 255, 255, 0.05),
+	inset -5px -5px 10px rgba(255, 255, 255, 0.05);
+
+}
+
+body.dark .text-field input:focus {
+	box-shadow: inset 1px 1px 2px rgba(255, 255, 255, 0.05),
+	inset -1px -1px 2px rgba(255, 255, 255, 0.05);
+}
+
+body.dark .button {
+	background: #091921;
+	box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.05),
+	-5px -5px 10px rgba(255, 255, 255, 0.05);	
+}
+
+body.dark .button:active {
+	box-shadow: inset 2px 2px 5px rgba(255, 255, 255, 0.05),
+	inset -5px -5px 10px rgba(255, 255, 255, 0.05);	
+}
