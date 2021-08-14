@@ -1,0 +1,92 @@
+/*
+# Creator: Arreaum
+# GitHub: https://github.com/arriaoedu123/
+# Creation date: 14/08/2021
+# Version: 1.0
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* { /* general preset */
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+	color: #000;
+}
+
+body { /* giving body a background */
+	width: 100%;
+	height: 100vh;
+	background: linear-gradient(315deg, #485461 0%, #28313b 74%);
+}
+
+.container { /* centering divs and giving it a basic style */
+	position: absolute;
+	max-width: 480px;
+	width: 100%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(1.2);
+	background: #fff;
+	border-radius: 15px;
+	padding: 40px 30px;
+	box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+	transition: opacity 0.2s ease-in-out,
+	transform 0.2s ease-in-out;
+	opacity: 0;
+	pointer-events: none;
+}
+
+.container.show {
+	opacity: 1;
+	pointer-events: auto;
+	transform: translate(-50%, -50%) scale(1);
+}
+
+.content-container,
+.icon { /* centering icon and texts*/
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.icon { /* giving icon div a size */
+	width: 80px;
+	height: 80px;
+}
+
+.icon span i { /* giving icon a size and color */
+	font-size: 60px;
+	background: linear-gradient(315deg, #485461 0%, #28313b 74%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.content-container h1 { /* giving title a size and margin */ 
+	font-size: 35px;
+	margin-top: 25px;
+}
+
+.content-container p { /* giving description a size and margin */
+	font-size: 18px;
+	margin-top: 25px;
+}
+
+.content-container button { /* giving button a style */
+	margin-top: 25px;
+	padding: 13px 35px;
+	font-size: 18px;
+	border: none;
+	border-radius: 25px;
+	background: linear-gradient(315deg, #485461 0%, #28313b 74%);
+	color: #fff;
+	cursor: pointer;
+	transition: 0.2s linear;
+}
+
+.content-container button:hover { /* increasing the size when hover the button */
+	transform: scale(1.1);
+}
+
