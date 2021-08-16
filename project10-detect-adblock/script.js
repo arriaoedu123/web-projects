@@ -1,11 +1,12 @@
 /* 
 # Creator: Arreaum
 # GitHub: https://github.com/arriaoedu123/
-# Creation date: 14/08/2021
-# Version: 1.0
+# Creation date: 16/08/2021
+# Version: 1.1
 */
 
 const detectAdBlock = document.querySelector("#detectAdBlock");
+const stillActive = document.querySelector("#stillActive");
 const container = document.querySelector(".container");
 const button = container.querySelector("button");
 
@@ -24,6 +25,12 @@ function dispenserWarning() {
 }
 
 if (!container.classList.contains("show")) {
-	//if display value is none then show the warning
+	//if display value is none then show the warning else remove it
 	getDisplay == "none" ? container.classList.add("show") : container.classList.remove("show");
 }
+
+stillActive.addEventListener("click", ()=> {
+	getDisplay = window.getComputedStyle(detectAdBlock).getPropertyValue("display");
+	//if user click on screen with adblock active then show the warning else remove the prevention
+	getDisplay == "none" ? container.classList.add("show") : stillActive.style.display = "none";
+});

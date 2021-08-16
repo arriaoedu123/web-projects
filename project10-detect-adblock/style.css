@@ -1,8 +1,8 @@
 /*
 # Creator: Arreaum
 # GitHub: https://github.com/arriaoedu123/
-# Creation date: 14/08/2021
-# Version: 1.0
+# Creation date: 16/08/2021
+# Version: 1.1
 */
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
@@ -19,6 +19,11 @@ body { /* giving body a background */
 	width: 100%;
 	height: 100vh;
 	background: linear-gradient(315deg, #485461 0%, #28313b 74%);
+}
+
+#stillActive { /* giving stillActive div a 100% screen size */
+	width: 100%;
+	height: 100vh;
 }
 
 .container { /* centering divs and giving it a basic style */
@@ -89,4 +94,3 @@ body { /* giving body a background */
 .content-container button:hover { /* increasing the size when hover the button */
 	transform: scale(1.1);
 }
-
