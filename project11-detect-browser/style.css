@@ -1,0 +1,62 @@
+/*
+# Creator: Arreaum
+# GitHub: https://github.com/arriaoedu123/
+# Creation date: 16/08/2021
+# Version: 1.0
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* { /* general preset */
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+	color: #000;
+}
+
+body { /* giving body a background */
+	width: 100%;
+	height: 100vh;
+	background: linear-gradient(315deg, #0cbaba 0%, #380036 74%);
+}
+
+.container { /* centering divs and giving it a basic style */
+	position: absolute;
+	max-width: 480px;
+	width: 100%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(1.2);
+	background: #fff;
+	border-radius: 15px;
+	padding: 40px 30px;
+	box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.container h1 { /* centering title and giving a color */
+	text-align: center;
+	margin-bottom: 40px;
+	background: linear-gradient(315deg, #0cbaba 0%, #380036 74%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.container .browsers { /* centering browsers icons */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.browsers span { /* giving span a left and right margin */
+	margin: 0 16px;
+	opacity: 0.3;
+	transition: opacity 0.5s linear;
+}
+
+.browsers span i { /* giving browsers icons a size and a color */
+	font-size: 42px;
+	background: linear-gradient(147deg, #000000 0%, #434343 74%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
