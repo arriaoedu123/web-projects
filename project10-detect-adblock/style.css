@@ -94,3 +94,67 @@ body { /* giving body a background */
 .content-container button:hover { /* increasing the size when hover the button */
 	transform: scale(1.1);
 }
+
+.toggleMode { /* giving checkbox div a position */
+	position: absolute;
+	top: 30px;
+	right: 80px;
+}
+
+.checkBox { /* giving checkbox input a style */
+	position: relative;
+	width: 55px;
+	height: 24px;
+	-webkit-appearance:  none;
+	outline: none;
+	border-radius: 20px;
+	background: #fff;
+	cursor: pointer;
+}
+
+.checkBox:before { /* giving the checkbox input ball a style */
+	content: '';
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	border-radius: 20px;
+	top: 2px;
+	left: 3px;
+	background: linear-gradient(315deg, #485461 0%, #28313b 74%);
+	transform: scale(1.1);
+	transition: 0.5s;
+}
+
+.checkBox:checked:before { /* moving the checkbox input ball to the right when checked */
+	left: 32px;
+}
+
+.checkText:before { /* giving the checkbox text a style */
+	position: absolute;
+	top: 60px;
+	right: 80px;
+	color: #fff;
+	content: 'AdBlock Off';
+	letter-spacing: 1px;
+	font-size: 14px;
+}
+
+.checkText.checkMode:before{ /* change the checkbox text when checked */
+	content: 'AdBlock On';
+}
+
+#detectAdBlock { /* detectAdBlock display when adblock is off */
+	display: block;
+}
+
+#detectAdBlock.on { /* detectAdBlock display when adblock is on */
+	display: none;
+}
+
+#stillActive { /* stillActive display when adblock is off */
+	display: none;
+}
+
+#stillActive.on { /* stillActive display when adblock is on */
+	display: block;
+}

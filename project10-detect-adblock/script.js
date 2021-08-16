@@ -10,6 +10,9 @@ const stillActive = document.querySelector("#stillActive");
 const container = document.querySelector(".container");
 const button = container.querySelector("button");
 
+//uncheck checkbox input by default
+isCheck.checked = false;
+
 //some classes that adblock do not render
 let adClasses = ["ad", "ads", "adsbox", "ad-placement", "doubleclick", "ad-placeholder", "ad-badge"];
 for (let item of adClasses) {
@@ -34,3 +37,15 @@ stillActive.addEventListener("click", ()=> {
 	//if user click on screen with adblock active then show the warning else remove the prevention
 	getDisplay == "none" ? container.classList.add("show") : stillActive.style.display = "none";
 });
+
+//checkbox function
+function toggleAdBlock() {
+	detectAdBlock.classList.toggle('on'); //showing the detectAdBlock div
+	stillActive.classList.toggle('on'); //showing the stillActive div
+	document.querySelector('.checkText').classList.toggle('checkMode'); //changing the checkbox text
+
+	if (isCheck.checked == true) {
+		//if the checkbox input is checked then show the warning
+		container.classList.add("show");
+	}
+}
