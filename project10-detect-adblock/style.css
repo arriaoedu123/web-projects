@@ -95,6 +95,7 @@ body { /* giving body a background */
 	transform: scale(1.1);
 }
 
+/* delete everything below if you will use this css in a real website */
 .toggleMode { /* giving checkbox div a position */
 	position: absolute;
 	top: 30px;
