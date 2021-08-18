@@ -2,99 +2,94 @@
 # Creator: Arreaum
 # GitHub: https://github.com/arriaoedu123/
 # Creation date: 29/03/2021
-# Update date: 30/03/2021
-# Version: 1.1
+# Update date: 18/08/2021
+# Version: 1.2
 */
 
-*, *::before, *::after {
+*, *::before, *::after { /* general presets */
 	box-sizing: border-box;
 	font-family: Fira Code, sans-serif;
 	font-weight: normal;
 }
 
-body {
+body { /* giving body a background */
 	padding: 0;
 	margin: 0;
-	background: black;
+	background: linear-gradient(315deg, #0cbaba 0%, #380036 74%);
+
 }
 
-.visor_calculadora {
+.calculator { /* centering calculator div and giving a size */
 	display: grid;
 	justify-content: center;
 	align-content: center;
 	min-height: 100vh;
-	grid-template-columns: repeat(4, 100px);
-	grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+	grid-template-columns: repeat(4, 80px);
+	grid-template-rows: minmax(100px, auto) repeat(5, 80px);
 }
 
-.cor-numero {
-	cursor: pointer;
-	font-size: 2rem;
-	border: 1px solid white;
-	outline: none;
-	background-color: rgba(255,255,255, .75) ;
-}
-
-.cor-numero:hover {
-	background-color: rgba(255,255,255, .9) ;
-}
-
-.cor-operacao {
-	cursor: pointer;
-	font-size: 2rem;
-	border: 1px solid white;
-	outline: none;
-	background-color: rgba(105,105,105, .7);
-}
-
-.cor-operacao:hover {
-	background-color: rgba(105,105,105, .9);
-}
-
-.span-two {
-	cursor: pointer;
-	font-size: 2rem;
-	border: 1px solid white;
-	outline: none;
-	background-color: rgba(220,20,60, .7);
-	grid-column: span 2;
-}
-
-.span-two:hover {
-	background-color: rgba(220,20,60, .9);
-}
-
-.span-two-igual {
-	cursor: pointer;
-	font-size: 2rem;
-	border: 1px solid white;
-	outline: none;
-	background-color: rgba(65,105,225, .5);
-	grid-column: span 2;
-}
-
-.span-two-igual:hover {
-	background-color: rgba(65,105,225, .9);
-}
-
-.negocio_dos_numeros {
+.calculator-display { /* giving calculator display a background and a basic configuration */
 	grid-column: 1 / -1;
 	background-color: rgba(255, 255, 255, .5);
 	display: flex;
 	align-items: flex-end;
 	justify-content: space-around;
 	flex-direction: column;
-	padding: 10px;
 	word-wrap: break-word;
 	word-break: break-all;
+	margin-bottom: 2px;
+	padding: 0 5px 0;
+	border-radius: 5px;
 }
 
-.negocio_dos_numeros .numero_anterior {
+.calculator-display .previous-num { /* giving previous number a color and a size */
 	color: rgba(255, 255, 255, .75);
 	font-size: 1.5rem;
 }
 
-.negocio_dos_numeros .numero_atual {
+.calculator-display .actual-num { /* giving actual number a color and a size */
 	color: white;
-	font-size: 2.5rem;
+	font-size: 2rem;
+}
+
+.number-style,
+.operation-style,
+.equal-c { /* giving calculator keys a border radius */ 
+	border-radius: 5px;
+	margin: 1px;
+	transition: transform 0.1s linear;
+}
+
+.number-style:active,
+.operation-style:active,
+.equal-c:active { /* giving an animation when click */
+	transform: scale(0.9);
+}
+
+.number-style,
+.operation-style { /* giving calculator keys a background and a style */
+	cursor: pointer;
+	font-size: 2rem;
+	/*border: 1px solid white;*/
+	border: none;
+	outline: none;
+	background-color: rgba(255,255,255, .75) ;
+}
+
+.number-style:hover,
+.operation-style:hover { /* giving an animation when hover */
+	background-color: rgba(255,255,255, 1) ;
+}
+
+.equal-c { /* giving equal and c keys a basic style */
+	cursor: pointer;
+	font-size: 2rem;
+	border: none;
+	outline: none;
+	background-color: rgba(220,20,60, .75);
+	grid-column: span 2;
+}
+
+.equal-c:hover { /* giving an animation when hover /*
+	background-color: rgba(220,20,60, 1);
 }

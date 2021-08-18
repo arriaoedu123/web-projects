@@ -2,8 +2,8 @@
 # Creator: Arreaum
 # GitHub: https://github.com/arriaoedu123/
 # Creation date: 29/03/2021
-# Update date: 30/03/2021
-# Version: 1.1
+# Update date: 18/08/2021
+# Version: 1.2
 -->
 
 <!DOCTYPE html>
@@ -18,36 +18,31 @@
 	<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&display=swap" rel="stylesheet"> 
 </head>
 <body>
-	<!-- Visor da Calculadora -->
-	<div class="visor_calculadora">
-		<!-- Coiso onde aparece os número do visor tudo -->		
-		<div class="negocio_dos_numeros">
-			<!-- Coiso anterior do cálculo -->			
-			<div numero-anterior class="numero_anterior"></div>
-			<!-- Coiso atual do cálculo -->			
-			<div numero-atual class="numero_atual"></div>
+	<div class="calculator"> <!-- calculator div -->		
+		<div class="calculator-display"> <!-- calculator display div -->
+			<div previous-number class="previous-num"></div> <!-- previous number div -->		
+			<div actual-number class="actual-num"></div> <!-- actual number div -->
 		</div>
-		<!-- Teclado da Calculadora -->	
-		<button btn-limpar class="span-two">C</button>
-		<button btn-deletar class="cor-operacao"><--</button>
-		<button btn-operacao class="cor-operacao">/</button>
-		<button btn-numero class="cor-numero">1</button>
-		<button btn-numero class="cor-numero">2</button>
-		<button btn-numero class="cor-numero">3</button>
-		<button btn-operacao class="cor-operacao">*</button>
-		<button btn-numero class="cor-numero">4</button>
-		<button btn-numero class="cor-numero">5</button>
-		<button btn-numero class="cor-numero">6</button>
-		<button btn-operacao class="cor-operacao">+</button>
-		<button btn-numero class="cor-numero">7</button>
-		<button btn-numero class="cor-numero">8</button>
-		<button btn-numero class="cor-numero">9</button>
-		<button btn-operacao class="cor-operacao">-</button>
-		<button btn-numero class="cor-operacao">.</button>
-		<button btn-numero class="cor-numero">0</button>
-		<button btn-igual class="span-two-igual">=</button>
-	</div>
+		<button btn-clear class="equal-c">C</button> <!-- clear display button -->
+		<button btn-delete class="operation-style"><--</button> <!-- delete button -->
+			<button btn-operation class="operation-style">/</button> <!-- division button -->
+			<button btn-number class="number-style">1</button> <!-- number one key -->
+			<button btn-number class="number-style">2</button> <!-- number two key -->
+			<button btn-number class="number-style">3</button> <!-- number three key -->
+			<button btn-operation class="operation-style">*</button> <!-- multiplication key -->
+			<button btn-number class="number-style">4</button> <!-- number four key -->
+			<button btn-number class="number-style">5</button> <!-- number five key -->
+			<button btn-number class="number-style">6</button> <!-- number six key -->
+			<button btn-operation class="operation-style">+</button> <!-- plus key -->
+			<button btn-number class="number-style">7</button> <!-- number seven key -->
+			<button btn-number class="number-style">8</button> <!-- number eight key -->
+			<button btn-number class="number-style">9</button> <!-- number nine key -->
+			<button btn-operation class="operation-style">-</button> <!-- minus -->
+			<button btn-number class="operation-style">.</button> <!-- dot key -->
+			<button btn-number class="number-style">0</button> <!-- number zero key -->
+			<button btn-equal class="equal-c">=</button> <!-- equal key -->
+		</div>
 
-	<script src="script.js" type="text/javascript" charset="utf-8"></script>
-</body>
-</html>
+		<script src="script.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+	</html>

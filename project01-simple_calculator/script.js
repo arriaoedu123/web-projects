@@ -2,147 +2,146 @@
 # Creator: Arreaum
 # GitHub: https://github.com/arriaoedu123/
 # Creation date: 29/03/2021
-# Update date: 30/03/2021
-# Version: 1.1
+# Update date: 18/08/2021
+# Version: 1.2
 */
 
-//Função de manipulação do Display
-class Calculadora {
-	constructor(numeroAnteriorText, numeroAtualText) {
-		this.numeroAnteriorText = numeroAnteriorText
-		this.numeroAtualText = numeroAtualText
-		this.limpar()
+//display manipulation function
+class Calculator {
+	constructor(previousNumber, actualNumber) {
+		this.previousNumber = previousNumber
+		this.actualNumber = actualNumber
+		this.clear()
 	}
 
-//Script do botão de limpar o Display
-	limpar() {
-		this.numeroAtual = ''
-		this.numeroAnterior = ''
-		this.operacao = undefined
-	}
+//display clear button script
+clear() {
+	this.actualText = ''
+	this.previousText = ''
+	this.operation = undefined
+}
 
-//Script do botão de deletar
-	deletar() {
-		this.numeroAtual = this.numeroAtual.toString().slice(0, -1)
-	}
+//delete button script
+delete() {
+	this.actualText = this.actualText.toString().slice(0, -1)
+}
 
-	teclaNumero(numero) {
-		if (numero === '.' && this.numeroAtual.includes('.')) return
-		this.numeroAtual = this.numeroAtual.toString() + numero.toString()
-	}
+numberKey(number) {
+	if (number === '.' && this.actualText.includes('.')) return
+		this.actualText = this.actualText.toString() + number.toString()
+}
 
-//Script dos botões de operação
-	teclaOperacao(operacao) {
-		if (this.numeroAtual === '') return
-		if (this.numeroAnterior !== '') {
-			this.calcular()
+//operation buttons script
+operationKey(operation) {
+	if (this.actualText === '') return
+		if (this.previousText !== '') {
+			this.calculate()
 		}
-		this.operacao = operacao
-		this.numeroAnterior = this.numeroAtual
-		this.numeroAtual = ''
+		this.operation = operation
+		this.previousText = this.actualText
+		this.actualText = ''
 	}
 
-//Função para calcular a operação
-	calcular() {
-		let calculo
-		const anterior = parseFloat(this.numeroAnterior)
-		const atual = parseFloat(this.numeroAtual)
-		if (isNaN(anterior) || isNaN(atual)) return
-		switch (this.operacao) {
+//function to calculate the operation
+calculate() {
+	let calculation
+	const anterior = parseFloat(this.previousText)
+	const atual = parseFloat(this.actualText)
+	if (isNaN(anterior) || isNaN(atual)) return
+		switch (this.operation) {
 			case '+':
-				calculo = anterior + atual
-				break
+			calculation = anterior + atual
+			break
 			case '-':
-				calculo = anterior - atual
-				break
+			calculation = anterior - atual
+			break
 			case '*':
-				calculo = anterior * atual
-				break
+			calculation = anterior * atual
+			break
 			case '/':
-				calculo = anterior / atual
-				break
+			calculation = anterior / atual
+			break
 			default:
-				return
+			return
 		}
-		this.numeroAtual = calculo
-		this.operacao = undefined
-		this.numeroAnterior = ''
+		this.actualText = calculation
+		this.operation = undefined
+		this.previousText = ''
 	}
 
-//Função para checar o '.' nas operações
-	checarNumeroDoDisplay(numero) {
-		const stringNumber = numero.toString()
-		const integerDigits = parseFloat(stringNumber.split('.')[0])
-		const decimalDigits = stringNumber.split('.')[1]
-		let integerDisplay
-		if (isNaN(integerDigits)) {
-			integerDisplay = ''
-		} else {
-			integerDisplay = integerDigits.toLocaleString('en', {
+//limit one dot for the operations
+checkDot(number) {
+	const stringNumber = number.toString()
+	const integerDigits = parseFloat(stringNumber.split('.')[0])
+	const decimalDigits = stringNumber.split('.')[1]
+	let integerDisplay
+	if (isNaN(integerDigits)) {
+		integerDisplay = ''
+	} else {
+		integerDisplay = integerDigits.toLocaleString('en', {
 			maximumFractionDigits: 0})
-		}
-		if (decimalDigits != null) {
-			return `${integerDisplay}.${decimalDigits}`
-		} else {
-			return integerDisplay
-		}
 	}
-
-//Função para atualizar o display toda vez que um botão é clicado
-	atualizarDisplay() {
-		this.numeroAtualText.innerText = 
-		this.checarNumeroDoDisplay(this.numeroAtual)
-		if (this.operacao != null) {
-			this.numeroAnteriorText.innerText = 
-			`${this.checarNumeroDoDisplay(this.numeroAnterior)} ${this.operacao}`
-		} else {
-			this.numeroAnteriorText.innerText = ''
-		}
+	if (decimalDigits != null) {
+		return `${integerDisplay}.${decimalDigits}`
+	} else {
+		return integerDisplay
 	}
 }
 
-//Const dos botões
-const numeroBtn = document.querySelectorAll('[btn-numero]')
-const operacaoBtn = document.querySelectorAll('[btn-operacao]')
-const igualBtn = document.querySelector('[btn-igual]')
-const deletarBtn = document.querySelector('[btn-deletar]')
-const limparBtn = document.querySelector('[btn-limpar]')
-const numeroAnteriorText = document.querySelector('[numero-anterior]')
-const numeroAtualText = document.querySelector('[numero-atual]')
+//function to refresh display when any button is clicked
+refreshDisplay() {
+	this.actualNumber.innerText = 
+	this.checkDot(this.actualText)
+	if (this.operation != null) {
+		this.previousNumber.innerText = 
+		`${this.checkDot(this.previousText)} ${this.operation}`
+	} else {
+		this.previousNumber.innerText = ''
+	}
+}
+}
 
-const calculadora = new Calculadora(numeroAnteriorText, numeroAtualText)
+const numberBtn = document.querySelectorAll('[btn-number]')
+const operationBtn = document.querySelectorAll('[btn-operation]')
+const equalBtn = document.querySelector('[btn-equal]')
+const deleteBtn = document.querySelector('[btn-delete]')
+const clearBtn = document.querySelector('[btn-clear]')
+const previousNumber = document.querySelector('[previous-number]')
+const actualNumber = document.querySelector('[actual-number]')
 
-//Função dos botões numéricos
-numeroBtn.forEach(button => {
+const calculator = new Calculator(previousNumber, actualNumber)
+
+//numeric keys event
+numberBtn.forEach(button => {
 	button.addEventListener('click', () => {
-		calculadora.teclaNumero(button.innerText)
-		calculadora.atualizarDisplay()
+		calculator.numberKey(button.innerText)
+		calculator.refreshDisplay()
 	})
 })
 
-//Função dos botões de operação
-operacaoBtn.forEach(button => {
+//operations keys event
+operationBtn.forEach(button => {
 	button.addEventListener('click', () => {
-		calculadora.teclaOperacao(button.innerText)
-		calculadora.atualizarDisplay()
+		calculator.operationKey(button.innerText)
+		calculator.refreshDisplay()
 	})
 })
 
-//Função do botão igual
-igualBtn.addEventListener('click', button => {
-	calculadora.calcular()
-	calculadora.atualizarDisplay()
+//equal key event
+equalBtn.addEventListener('click', button => {
+	calculator.calculate()
+	calculator.refreshDisplay()
 })
 
-//Função do botão de limpar o display
-limparBtn.addEventListener('click', button => {
-	calculadora.limpar()
-	calculadora.atualizarDisplay()
+//clear display key event
+clearBtn.addEventListener('click', button => {
+	calculator.clear()
+	calculator.refreshDisplay()
 })
 
-//Função do botão de deletar
-deletarBtn.addEventListener('click', button => {
-	calculadora.deletar()
-	calculadora.atualizarDisplay()
+//delete key event
+deleteBtn.addEventListener('click', button => {
+	calculator.delete()
+	calculator.refreshDisplay()
 })
 
