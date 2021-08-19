@@ -2,79 +2,125 @@
 # Creator: Arreaum
 # GitHub: https://github.com/arriaoedu123/
 # Creation date: 05/11/2020
-# Update date: 11/05/2020
-# Version: 1.1
+# Update date: 19/08/2021
+# Version: 1.2
 */
 
-* {
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* { /* general presets */
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
+  font-family: 'Poppins', sans-serif;
 }
 
-body {
+body { /* centering divs and giving a background */
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(45,45,45,1) 50%, rgba(0,0,0,1) 100%);
+  background: linear-gradient(147deg, #000000 0%, #2c3e50 74%);
 }
 
-.form .registro-form {
+.form { /* giving form a basic style */
+  z-index: 1;
+  position: absolute;
+  width: 340px;
+  text-align: center;
+  padding: 15px 25px;
+  background: #fff;
+  border-radius: 15px;
+}
+
+.form i { /* giving form icon a size and a color */
+  z-index: 1;
+  font-size: 65px;
+  margin-bottom: 30px;
+  background: linear-gradient(147deg, #000000 0%, #2c3e50 74%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-field { /* giving text-field div a size */
+  position: relative;
+  height: 55px;
+  margin-bottom: 30px;
+}
+
+.user-input { /* centering input and giving a style */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  border: 2px solid #2c3e50;
+  background: rgba(255, 255, 255, 0.2);
+  color: #2c3e50;
+  font-size: 18px;
+  padding: 16px;
+  border-radius: 15px;
+  transition: 0.5s;
+  transition-property: border-left, border-right, box-shadow;
+  z-index: 1;
+}
+
+.textfield-label { /* giving textfield label a position and a basic style */
+  position: absolute;
+  top: 14px;
+  left: 16px;
+  padding: 0 6px;
+  background: #fff;
+  color: #80868B;
+  font-size: 18px;
+  transition: 0.3s ease;
+}
+
+.user-input:focus ~ .textfield-label,
+.user-input:valid ~ .textfield-label { /* moving textfield label on top side of the input */
+  top: -.5rem;
+  left: .8rem;
+  font-size: 13px;
+  font-weight: 500;
+  z-index: 10;
+}
+
+.button { /* giving button a size and a basic style */
+  outline: none;
+  border: none;
+  width: 100%;
+  height: 55px;
+  background: linear-gradient(147deg, #000000 0%, #2c3e50 74%);
+  color: #fff;
+  font-size: 18px;
+  letter-spacing: 1px;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.button:hover { /* increasing button size when hover */
+  transform: scale(1.05);
+}
+
+a { /* giving links a color */
+  color: #2c3e50;
+}
+
+/* login form css */
+
+.signup-form {  /* hidding register display */
   display: none;
 }
 
-.form {
-  z-index: 1;
-  font-family: Arial, sans-serif;
-  position: absolute;
-  width: 320px;
-  text-align: center;
+.options-01 { /* giving remember me checkbox div a margin bottom */
+  margin-bottom: 75px;
 }
 
-.form i {
-  z-index: 1;
-  color: #ccc;
-  font-size: 65px;
-  margin-bottom: 30px;
-}
-
-.form .user-input {
-  width: 320px;
-  height: 55px;
-  margin-bottom: 30px;
-  outline: none;
-  border: none;
-  background: rgba(255, 255, 255, 0.2);
-  color: #fff;
-  font-size: 18px;
-  text-align: center;
-  border-radius: 5px;
-  transition: 0.5s;
-  transition-property: border-left, border-right, box-shadow;
-}
-
-.form .user-input:hover,
-.form .user-input:focus,
-.form .user-input:active {
-  border-left: solid 8px #4285f4;
-  border-right: solid 8px #4285f4;
-  box-shadow: 0 0 25px rgba(66, 133, 244, 0.8);
-}
-
-.form .options-01 {
-  margin-bottom: 50px;
-}
-
-.form .options-01 input {
-  width: 15px;
-  height: 15px;
-  margin-right: 5px;
-}
-
-.form .options-01 .lembrar-me {
-  color: #bbb;
+.remember-me { /* giving remember me label a color */
+  color: #80868B;
   font-size: 14px;
   display: flex;
   align-items: center;
@@ -82,88 +128,80 @@ body {
   cursor: pointer;
 }
 
-.form .options-01 a {
-  color: #888;
+.remember-me input { /* giving remember me checkbox a basic style */
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+  -webkit-appearance: none;
+  border: 2px solid #2c3e50;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: 0.2s background;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.remember-me input:checked { /* change the checkbox background when checked */
+  background: #2c3e50;
+}
+
+.remember-me input:after { /* giving a check icon to checkbox */
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f00c";
+  font-size: 10px;
+  color: #fff;
+  display: none;
+  padding-left: 1px;
+}
+
+.remember-me input:checked:after { /* showing the checkbox check icon when checked */
+  display: block;
+}
+
+.options-01 a { /* giving forgot password a basic style */
   font-size: 14px;
   font-style: italic;
   float: right;
 }
 
-.form .botao {
-  outline: none;
-  border: none;
-  width: 320px;
-  height: 55px;
-  background: #4285f4;
-  color: #fff;
-  font-size: 18px;
-  letter-spacing: 1px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.5s;
-  transition-property: border-left, border-right, box-shadow;
-}
-
-.form .botao:hover {
-  border-left: solid 8px rgba(255, 255, 255, 0.5);
-  border-right: solid 8px rgba(255, 255, 255, 0.5);
-  box-shadow: 0 0 25px rgba(255, 255, 255, 0.8);
-}
-
-.form .options-02 {
-  color: #bbb;
+.options-02 { /* giving sign up label a basic style */
+  color: #80868B;
   font-size: 14px;
   margin-top: 30px;
 }
 
-.form .options-02 a {
-  color: #4285f4;
-}
+/* end login form css */
+/* recovery password css */
 
-.form .recuperacao-form .botao {
-  margin-top: 10px;
-}
-
-.form .recuperacao-form {
+.recovery-form { /* hidding recovery display */
   display: none;
 }
 
-.form .recuperacao-form i {
+.recovery-form i { /* giving recovery icon a margin bottom */
   margin-bottom: 50px
 }
 
-.form .options-03 {
-  color: #bbb;
-  font-size: 14px;
-  margin-top: 30px;
-}
-
-.form .options-03 a {
-  color: #4285f4;
-}
-
-.form .options-04 {
-  color: #bbb;
+.options-04 { /* giving sign in label a color */
+  color: #80868B;
   font-size: 14px;
   margin-top: 35px;
 }
 
-.form .options-04 a {
-  color: #4285f4;
+/* end recovery password css */
+/* sign up form css */
+
+.options-03 { /* giving sign in label a color */
+  color: #80868B;
+  font-size: 14px;
+  margin-top: 30px;
 }
 
-/* Responsive CSS */
+/* end sign up form css */
+/* responsive css */
 
 @media screen and (max-width: 500px) {
   .form {
     width: 95%;
   }
-
-  .form .user-input {
-    width: 100%;
-  }
-
-  .form .botao {
-    width: 100%;
-  }
-}
