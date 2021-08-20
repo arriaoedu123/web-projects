@@ -2,91 +2,171 @@
 # Creator: Arreaum
 # GitHub: https://github.com/arriaoedu123/
 # Creation date: 08/01/2021
-# Version: 1.0
+# Update date: 19/08/2021
+# Version: 1.1
 */
 
-*{
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* { /* general presets */
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
 }
-body{
-	height: 100vh;
-	background: #03dfff;
-	background: linear-gradient(90deg, rgba(1,12,126,1) 0%, rgba(91,0,157,1) 60%);
+
+body { /* giving body a background */
+	min-height: calc(100vh - 50px);
+	background-image: linear-gradient(315deg, #7f53ac 0%, #647dee 74%);
 }
-.container{
+
+.container { /* giving container div a basic style */
 	position: relative;
 	max-width: 800px;
 	padding: 10px;
 	margin: 50px auto;
+	background: #fff;
+	border-radius: 15px;
 }
-.addTask{
+
+.addTask { /* giving add task div a basic style */ 
 	width: 100%;
 	display: flex;
 	padding: 10px 0;
+	margin-bottom: 25px;
 }
-.addTask > input[type="text"]{
+
+.text-field { /* giving text-field a style */
 	width: 90%;
-	color: white;
+	color: #647dee;
 	border: none;
-	border-bottom: 2px solid white;
+	border-bottom: 2px solid #647dee;
 	background: none;
-	padding: 10px;
+	padding: 0 0 3px 8px;
 	font-size: 22px;
 	outline: none;
+	position: relative;
+	z-index: 1;
 }
-.addTask button{
-	margin: 0 10px;
-	background: white;
-	color: black;
+
+.addTask button { /* giving add task button a style */
+	margin-left: 20px;
+	background: #fff;
+	color: #647dee;
 	font-size: 18px;
 	text-transform: uppercase;
 	padding: 10px;
-	border: none;
+	border: 2px solid #647dee;
 	outline: none;
 	border-radius: 10px;
 	cursor: pointer;
+	transition: 0.5s all ease;
 }
-.notCompleted, .Completed{
+
+.addTask button:active { /* decreasing add task button size when click */
+	transform: scale(0.8);
+}
+
+.notCompleted, .completed { /* giving not completed and completed task list divs a padding */
 	margin: 5px 0;
 	padding: 20px;
 }
-h3{
-	font-size: 28px;
-	text-transform: uppercase;
-	text-align: center;
-	color: #fff;
+
+.center-separator { /* centering the separator div */
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
-ol{
+
+.separator { /* giving separator div a style */
+	margin: 30px 18px;
+	width: 100%;
+	height: 1px;
+	border: 1px solid #647dee;
+	background: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.separator span { /* centering separator div label and giving a color */
+	color: #647dee;
+	text-transform: uppercase;
+	background: #fff;
+	padding: 0 10px;
+	font-size: 22px;
+}
+
+ol{ /* task list preset */
 	list-style: none;
 	counter-reset: my-counter;
 }
-ol li{
+
+ol li { /* giving not completed task list a style */
 	width: 100%;
 	padding: 18px;
 	margin: 5px 0;
-	background: #DF3939;
+	border: 3px solid #DF3939;
 	border-radius: 10px;
+	background: #fff;
 	font-size: 22px;
 	counter-increment: my-counter;
+	word-wrap: break-word;
+	color: #647dee;
 }
-ol.Completed li{
-	background: #66CC00;
+
+ol.completed li { /* giving completed task list a border */ 
+	border: 3px solid #66cc00;
+	background: #fff;
 }
-ol li::before{
+
+ol li::before { /* giving task counter a style */
 	content: counter(my-counter);
-	background: black;
+	background: #fff;
 	width: 2rem;
 	height: 2rem;
+	border: 2px solid #647dee;
 	border-radius: 50%;
 	display: inline-block;
 	line-height: 2rem;
 	text-align: center;
-	color: #fff;
+	color: #647dee;
 	margin-right: 0.5rem;
 }
-li button{
+
+.show { /* show task */
+	animation: show 0.3s linear;
+}
+
+.hide { /* hide task */
+	animation: hide 0.3s linear;
+}
+
+@keyframes show { /* show task animation */
+	0% {
+		opacity: 0;
+		transform: scale(1.2);
+	}
+
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+@keyframes hide { /* hide task animation */
+	0% {
+		opacity: 1;
+		transform: scale(1);
+	}
+
+	100% {
+		opacity: 0;
+		transform: scale(1.2);
+	}
+}
+
+li button { /* task buttons */
 	float: right;
 	padding: 5px;
 	font-size: 28px;
@@ -96,4 +176,10 @@ li button{
 	border: none;
 	outline: none;
 	cursor: pointer;
+	color: #647dee;
+	transition: 0.3s linear;
+}
+
+li button:active { /* decreasing task buttons size when click */
+	transform: scale(0.8);
 }

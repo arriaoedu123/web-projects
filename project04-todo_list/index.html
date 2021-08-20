@@ -2,7 +2,8 @@
 # Creator: Arreaum
 # GitHub: https://github.com/arriaoedu123/
 # Creation date: 08/01/2021
-# Version: 1.0
+# Update date: 19/08/2021
+# Version: 1.1
 -->
 
 <!DOCTYPE html>
@@ -11,21 +12,23 @@
   	<meta charset="utf-8">
   	<title>To-Do List</title>
   	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-  	<link rel="stylesheet" href="style.css"> 
+  	<link rel="stylesheet" type="text/css" href="style.css"> 
 </head>
 <body>
-	<div class="container">
-		<div class="addTask">
-			<input type="text" placeholder="Add a Task">
-			<button>Add</button>
+	<div class="container"> <!-- main div -->
+		<div class="addTask"> <!-- add a task div -->
+			<input type="text" class="text-field" placeholder="Add a task"> <!-- text field input -->
+			<button type="button">Add</button> <!-- add a task button -->
 		</div>
-
-		<ol class="notCompleted">
-			<h3>Not Completed</h3>
+		<div class="center-separator"> <!-- not completed separator -->
+			<div class="separator"><span>Not completed</span></div>
+		</div>
+		<ol class="notCompleted"> <!-- not completed tasks list -->
 		</ol>
-
-		<ol class="Completed">
-			<h3>Completed</h3>
+		<div class="center-separator"> <!-- completed separator -->
+			<div class="separator"><span>Completed</span></div>
+		</div>
+		<ol class="completed"> <!-- completed tasks list -->
 		</ol>
 	</div>
 
