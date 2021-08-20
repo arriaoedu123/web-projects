@@ -2,43 +2,47 @@
 # Creator: Arreaum
 # GitHub: https://github.com/arriaoedu123/
 # Creation date: 14/05/2021
-# Update date: 15/05/2021
-# Version: 1.1
+# Update date: 19/08/2021
+# Version: 1.2
 */
 
-* {
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* { /* general presets */
 	margin: 0;
 	padding: 0;
-	font-family: 'Arial', sans-serif;
+	font-family: 'Poppins', sans-serif;
 	user-select: none;
 }
 
-body {
+body { /* centering divs and giving body a background */
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	min-height: 100vh;
-	background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(45,45,45,1) 50%, rgba(0,0,0,1) 100%);
+	background: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
 }
 
-.inputText {
+.inputText { /* text field div */
 	position: relative;
-	padding: 8px;
+	padding: 15px;
 	width: 450px;
+	background: #fff;
+	border-radius: 15px;
 }
 
-.inputText h2 {
+.inputText h2 { /* text field div title */
 	display: flex;
 	justify-content: center;
 	font-size: 28px;
-	color: #bbb;
+	color: #009ffd;
 }
 
-.inputText input {
+.inputText input { /* text field input */
 	position: relative;
 	width: 100%;
 	height: 60px;
-	border: none;
+	border: 3px solid #009ffd;
 	margin: 15px 0 20px;
 	background: rgba(255, 255, 255, 0.2);
 	outline: none;
@@ -46,51 +50,56 @@ body {
 	font-size: 24px;
 	letter-spacing: 4px;
 	box-sizing: border-box;
-	border-radius: 8px;
-	color: #fff;
+	border-radius: 15px;
+	color: #009ffd;
 }
 
-.inputText input::placeholder {
+.inputText input::placeholder { /* giving text field input placeholder a default letter spacing */
 	letter-spacing: 0px;
 }
 
-.inputText #btn {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+#btn { /* generate password button */
 	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	cursor: pointer;
 	height: 60px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%);
 	width: 250px;
-	color: #FFF;
-	background: #4285f4;
+	color: #009ffd;
+	background: #fff;
 	font-size: 24px;
-	display: inline-block:
-	padding: 10px 15px;
-	border-radius: 8px;
-	transition: 0.5s;
-    transition-property: box-shadow;
+	border-radius: 15px;
+	border: 3px solid #009ffd;
+	transition: 0.2s linear;
 }
 
-.inputText #btn:hover {
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+#btn:hover { /* increasing generate password button when hover */
+    transform: translate(-50%) scale(1.1);
 }
 
-.inputText #btn:active {
-	background: #29569f;
+#btn:active { /* decreasing generate password button when click */
+	transform: translate(-50%) scale(1);
 }
 
-.inputText i {
+.inputText i { /* giving copy icon a position and a color */
 	position: absolute;
-	top: 64px;
-	right: 15px;
-	font-size: 32pt;
+	top: 81px;
+	right: 25px;
+	font-size: 42px;
 	cursor: pointer;
-	opacity: 0.2;
-	color: white;
+	opacity: 0.4;
+	color: #009ffd;
+	transition: 0.3s linear;
 }
 
-.inputText i:hover,
-.inputText i:active {
-	opacity: 0.8;
+.inputText i:hover { /* giving copy icon a opacity when hover */
+	opacity: 1;
+}
+
+.inputText i:active { /* decreasing copy icon size when click */
+	font-size: 35px;
 }
