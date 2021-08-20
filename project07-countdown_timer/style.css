@@ -10,13 +10,19 @@
 	src:url(digital.ttf);
 }
 
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
 body {
 	font-family: 'digital', sans-serif;
 	display: flex;
+	min-height: 100vh;
 	align-items: center;
 	justify-content: center;
 	text-align: center;
-	margin: 0;
 	overflow: hidden;
 	background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(15,15,15,1) 50%, rgba(0,0,0,1) 100%);
 	color: red;	
