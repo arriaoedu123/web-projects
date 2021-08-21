@@ -43,6 +43,7 @@ This repository is a registry of the ideas I find on the internet. Feel free to 
   9. [Neumorphism Design](https://github.com/arriaoedu123/web-projects/tree/main/project09-neumorphism_design)
   10. [Detect AdBlock](https://github.com/arriaoedu123/web-projects/tree/main/project10-detect-adblock)
   11. [Detect Browser](https://github.com/arriaoedu123/web-projects/tree/main/project11-detect-browser)
+  12. [Youtube Thumbnail Downloader](https://github.com/arriaoedu123/web-projects/tree/main/project12-youtube-thumbnail-downloader)
 
 <br>
 
