@@ -1,0 +1,37 @@
+<!--
+# Creator: Arreaum
+# GitHub: https://github.com/arriaoedu123/
+# Creation date: 21/08/2021
+# Version: 1.0
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+	<title>Youtube Thumbnail Downloader</title>
+</head>
+<body>
+	<form class="container"> <!-- main container -->
+		<div class="url-field"> <!-- url field div -->
+			<span class="url-field-title">Paste the video url here:</span> <!-- form title -->
+			<input type="text" placeholder="https://www.youtube.com/watch?v=o7cCJqya7wc" class="url-field-input" required> <!-- youtube video url field -->
+			<div class="bottom-line"></div> <!-- bottom line div -->
+		</div>
+		<div class="preview-div"> <!-- thumbnail preview div -->
+			<img src="" class="thumbnail"> <!-- thumbnail image -->
+			<i class="fas fa-cloud-download-alt"></i> <!-- preview div icon -->
+			<span>Thumbnail image preview</span> <!-- preview div text -->
+		</div>
+		<button type="button" class="button"> <!-- download thumbnail image -->
+			Download thumbnail
+		</button>
+	</form>
+
+	<script type="text/javascript" src="js/FileSaver.min.js" charset="utf-8"></script>
+	<script type="text/javascript" src="js/script.js" charset="utf-8"></script>
+</body>
+</html>
