@@ -82,15 +82,13 @@ header .menu a i{
 
 .card {
 	width: 340px;
+	height: 200px;
   	margin: 10px;
   	position: relative;
   	display: flex;
   	align-items: center;
   	justify-content: center;
-  	text-align: center;
-  	flex-direction: column;
   	border-radius: 10px;
-  	overflow: hidden;
   	background-size: cover;
   	object-fit: cover;
   	transition: transform 0.3s;
@@ -118,13 +116,20 @@ header .menu a i{
 	border-radius: 10px;
 }
 
-.card:nth-child(3) img,
-.card:nth-child(5) img {
-	border-radius: 0;
+.card:nth-child(4),
+.card:nth-child(6) {
+	overflow: hidden;
+}
+
+.card:nth-child(4):hover,
+.card:nth-child(6):hover {
+	overflow: visible;
+	z-index: 98;
 }
 
 .card:nth-child(8) img,
-.card:nth-child(9) img {
+.card:nth-child(10) img,
+.card:nth-child(11) img {
 	height: 100%;
 }
 
@@ -137,5 +142,5 @@ header .menu a i{
 }
 
 .card:hover img {
-	filter: blur(4px);
+	filter: blur(1px);
 }
