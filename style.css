@@ -47,7 +47,10 @@ header .brand{
 }
 
 header .menu a {
-	text-decoration: none;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 header .menu a i{
