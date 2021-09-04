@@ -1,0 +1,141 @@
+/*
+# Creator: Arreaum
+# GitHub: https://github.com/arriaoedu123/
+# Creation date: 04/09/2021
+# Version: 1.0
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* { /* general preset */
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+	color: #000;
+}
+
+body { /* giving body a background */
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	background: #d7e1ec;
+}
+
+header{
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 25px;
+  transition: 0.5s;
+  background: black;
+}
+
+header .brand{
+  color: #d7e1ec;
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+}
+
+header .menu a {
+	text-decoration: none;
+}
+
+header .menu a i{
+  color: #d7e1ec;
+  font-size: 24px;
+  font-weight: 500;
+  transition: 0.3s;
+  transition-property: color, background;
+}
+
+.container {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	margin-top: 100px;
+	padding-bottom: 50px;
+}
+
+.container h1 {
+	text-align: center;
+	margin: 50px 0;
+}
+
+.content-container {
+	width: 90%;
+	display: flex;
+  	justify-content: center;
+  	flex-wrap: wrap;
+}
+
+.card {
+	width: 340px;
+  	margin: 10px;
+  	position: relative;
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	text-align: center;
+  	flex-direction: column;
+  	border-radius: 10px;
+  	overflow: hidden;
+  	background-size: cover;
+  	object-fit: cover;
+  	transition: transform 0.3s;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.card a {
+	position: absolute;
+	font-size: 24px;
+	text-decoration: none;
+	text-transform: uppercase;
+	opacity: 0;
+	transition: opacity 0.3s;
+	z-index: 99;
+}
+
+.card a h2 {
+	color: #d7e1ec;
+	text-shadow: 2px 2px #000;
+}
+
+.card img {
+	width: 100%;
+	height: auto;
+	border-radius: 10px;
+}
+
+.card:nth-child(3) img,
+.card:nth-child(5) img {
+	border-radius: 0;
+}
+
+.card:nth-child(8) img,
+.card:nth-child(9) img {
+	height: 100%;
+}
+
+.card:hover {
+	transform: scale(1.05);
+}
+
+.card:hover a {
+	opacity: 1;
+}
+
+.card:hover img {
+	filter: blur(4px);
+}
