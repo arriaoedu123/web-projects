@@ -145,3 +145,13 @@ header .menu a i{
 .card:hover img {
 	filter: blur(1px);
 }
+
+@media (max-width: 768px) {
+	.mob img {
+		height: 100%;
+	}
+
+	.card a {
+		opacity: 1;
+	}
+}
