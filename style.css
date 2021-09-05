@@ -47,7 +47,10 @@ header .brand{
 }
 
 header .menu a {
-	text-decoration: none;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 header .menu a i{
@@ -88,6 +91,7 @@ header .menu a i{
   	display: flex;
   	align-items: center;
   	justify-content: center;
+  	text-align: center;
   	border-radius: 10px;
   	background-size: cover;
   	object-fit: cover;
@@ -143,4 +147,14 @@ header .menu a i{
 
 .card:hover img {
 	filter: blur(1px);
+}
+
+@media (max-width: 768px) {
+	.mob img {
+		height: 100%;
+	}
+
+	.card a {
+		opacity: 1;
+	}
 }
