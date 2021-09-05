@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/73148019/118019196-1b6e9980-b32f-11eb-820c-0ec1c901d799.png">
+  <img width="170px" height="170px" title="by Freepik" src="https://user-images.githubusercontent.com/73148019/132141303-bd39bcda-f8d3-47d2-a909-ea798d7551a9.png">
 </p>
 
 <p align="center">
@@ -24,7 +24,7 @@
 
 # About
 
-This repository is a registry of the ideas I find on the internet. Feel free to use them in your project.
+This repository is a registry of the ideas I find on the internet. Feel free to use them in your project, or try it <a href="https://arriaoedu123.github.io/web-projects/">here</a>.
 
 <br>
 
