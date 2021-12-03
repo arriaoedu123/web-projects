@@ -47,4 +47,10 @@ This repository is a registry of the ideas I find on the internet. Feel free to 
 
 <br>
 
+## License
+
+This project is licensed under the terms of the <a href="https://github.com/arriaoedu123/web-projects/blob/main/LICENSE">MIT license.</a>
+
+<br>
+
 ***
