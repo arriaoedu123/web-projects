@@ -45,21 +45,21 @@ operationKey(operation) {
 //function to calculate the operation
 calculate() {
 	let calculation
-	const anterior = parseFloat(this.previousText)
-	const atual = parseFloat(this.actualText)
-	if (isNaN(anterior) || isNaN(atual)) return
+	const previous = parseFloat(this.previousText)
+	const actual = parseFloat(this.actualText)
+	if (isNaN(previous) || isNaN(actual)) return
 		switch (this.operation) {
 			case '+':
-			calculation = anterior + atual
+			calculation = previous + actual
 			break
 			case '-':
-			calculation = anterior - atual
+			calculation = previous - actual
 			break
 			case '*':
-			calculation = anterior * atual
+			calculation = previous * actual
 			break
 			case '/':
-			calculation = anterior / atual
+			calculation = previous / actual
 			break
 			default:
 			return
